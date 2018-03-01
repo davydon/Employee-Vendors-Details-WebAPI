@@ -1,0 +1,94 @@
+﻿@model IEnumerable<EmployeeVendorsMVC.Models.VendorMVC>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a href="@Url.Action("AddOrEdit","Vendors")" class="btn btn-success">
+        <span class="glyphicon glyphicon-plus"></span>
+        Add Vendors
+    </a>
+</p>
+<table class="table table-bordered table-condensed well">
+    <tr class="head">
+        <th>
+            @Html.DisplayNameFor(model => model.CompanyName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Phone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Product)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ContactPerson)
+        </th>
+        <th>Actions</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CompanyName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Phone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Product)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ContactPerson)
+        </td>
+        <td>
+            <a href="@Url.Action("AddOrEdit","Vendors", new { id=item.Id})" class="btn btn-success">
+                <span class="glyphicon glyphicon-edit"></span>
+                Edit
+            </a>
+            <a onclick="Delete(@item.Id)" class="btn btn-success">
+                <span class="glyphicon glyphicon-trash"></span>
+                Delete
+            </a>
+        </td>
+    </tr>
+}
+
+</table>
+@section scripts{
+
+    <script>
+       $(function () {
+
+           var successMessage = '@TempData["SuccessMessage"]'
+           if (successMessage != '')
+               alertify.success(successMessage);
+       });
+
+       function Delete(id) {
+           alertify.confirm('Web api operations', 'Are you sure you want to delete record', function () {
+               window.location.href = '@Url.Action("Delete","Vendors")/' + id;
+           }, null);
+
+       }
+
+    </script>
+
+}
+<div>
+    @Html.ActionLink("Home", "Index","Employees")
+</div>

@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeVendorAPI", "EmployeeVendorAPI\EmployeeVendorAPI.csproj", "{BE4B25BC-4725-48C6-8384-01816FCDC96B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeVendorsMVC", "EmployeeVendorsMVC\EmployeeVendorsMVC.csproj", "{03D5ECBC-5780-4D33-B621-EF0FEEF8797B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BE4B25BC-4725-48C6-8384-01816FCDC96B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE4B25BC-4725-48C6-8384-01816FCDC96B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE4B25BC-4725-48C6-8384-01816FCDC96B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE4B25BC-4725-48C6-8384-01816FCDC96B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03D5ECBC-5780-4D33-B621-EF0FEEF8797B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03D5ECBC-5780-4D33-B621-EF0FEEF8797B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03D5ECBC-5780-4D33-B621-EF0FEEF8797B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03D5ECBC-5780-4D33-B621-EF0FEEF8797B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
